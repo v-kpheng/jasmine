@@ -119,6 +119,8 @@ getJasmineRequireObj().util = function(j$) {
   function callerFile() {
     var file;
 
+    // ElectronJS versions 11.0.0-nightly.20200721 and beyond won't expose the
+    // caller file for some reason.
     try {
       var trace = new j$.StackTrace(util.errorWithStack());
       file = trace.frames[2].file;
