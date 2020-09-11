@@ -17,6 +17,12 @@ Upgrading from Jasmine 2.x? Check out the [3.0 release notes](https://github.com
 
 Please read the [contributors' guide](https://github.com/jasmine/jasmine/blob/master/.github/CONTRIBUTING.md)
 
+## Why the fork?
+
+For ElectronJS versions 11.0.0-nightly.20200721 and beyond, [https://github.com/lele85/karma-electron-launcher](karma-electron-launcher) is able to capture ElectronJS but no tests get run.  This fork [https://github.com/v-kpheng/jasmine/blob/electron-missing-jasmineFile/src/core/util.js#L119](patches) the issue.
+
+The last nightly build that karma-electron-launcher was able to run tests against was 11.0.0-nightly.20200720.  The diff between that version and 11.0.0-nightly.20200721 is: https://github.com/electron/electron/compare/8f5280a821644a57e1f041a1bf570035d48cd4f6...95dd81bd689416fe02efad77c973a5643ab88a54.
+
 ## Installation
 
 For the Jasmine NPM module:<br>
